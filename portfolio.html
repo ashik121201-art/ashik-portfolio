@@ -1,0 +1,289 @@
+<!DOCTYPE html>>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+    <title>ASHIK ILLAHI | PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'poppins',sans-serif;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background: #0f172a;
+            color:white ;
+        }
+        /* navbar*/
+        nav{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15,23,42,.8);
+            backdrop-filter:blur(10px) ;
+            z-index: 1000;
+        }
+        .logo{
+            font-size: 28px;
+            font-weight: 700;
+            color: #38bdf8;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+        }
+        nav ul li{
+            margin-left: 25px;
+        }
+        nav ul li a{
+            color:white;
+            text-decoration: none;
+            transition: .3s;
+        }
+        nav ul li a:hover{
+            color: #38bdf8;
+        }
+        /*hero*/
+        .hero{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: radial-gradient(circle at top left,#1e3a8a,transparent 40%),
+            radial-gradient(circle at bottom right,#0ea5e9,transparent 40%);
+        }
+        .hero-content{
+            max-width: 800px;
+        }
+        .hero h1{
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+        .hero h1 span{
+            background: linear-gradient(90deg,#38bdf8,#818cf8);
+            -webkit-background-clip:text;
+            color:transparent;
+        }
+        .hero p{
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color:#cbd5e1;
+        }
+        .profile-pic{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38bdf8;
+            margin-bottom: 20px;
+            box-shadow: 0 0 30px;
+            rgba(56,189,248,0.6);
+        }
+        .btn{
+            display:inline-block;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(90deg,#38bdf8,#6366f1);
+            transition: .3s;
+        }
+        .btn:hover{
+            transform: translateY(-5px);
+        }
+        /*sections*/
+        section{
+            padding: 100px 10%;
+        }
+        .section-title{
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        /*about*/
+        .about-card{
+            background: rgba(255,255,255,.08);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+        }
+        /*skill*/
+        .skills{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap:15px;
+        }
+        .skill{
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.1);
+        }
+        /*projects*/
+        .projects{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+            gap: 25px;
+        }
+        .project-card{
+            background: rgba(255,255,255,.08);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 25px;
+            transition: .4s;
+        }
+        .project-card:hover{
+            transform: translateY(-10px);
+        }
+        .project-card h3{
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+        /*contact*/
+        .contact-form{
+            max-width: 600px;
+            margin: auto;
+        }
+        .Contact-form input,
+        .Contact-form textarea{
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            background: #1e293b;
+            color:white;
+        }
+        .Contact-form button{
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            background: linear-gradient(90deg,#38bdf8,#6366f1);
+        }
+        /*footer*/
+        footer{
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color:#94a3b8;
+        }
+        /*mobile*/
+        @media(max-width:768px){
+            .hero h1{
+                font-size: 2.9rem;
+            }
+            nav{ 
+                flex-direction: column;
+            }
+            nav ul{
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">ASHIK ILLAHI</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <img src="myphoto.jpg" alt="ashik"class="profile-pic">
+            <h1>Hi, iam <span>Ashik</span></h1>
+            <h2 id="typing"></h2>
+            <p> MCA Graguate passionate about web development,responsive websites.</p>
+            <a href="#projects" class="btn">view projects</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About me</h2>
+        <div class="about-card">
+            <p> I am an MCA graduate passionate about developing modern web applications and learning new technologies.
+                my goal is to start my career as a software devloper and contibute to innovative projects.</p>
+        </div>
+    </section>
+    <section id="#skills">
+        <h2 class="section-title">skills</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">javascript</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">Git</div>
+            <div class="skill">Excel</div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2 class="section-title">projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Modern responsive portfolio using HTML,CSS and Javascript.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Weather App</h3>
+                <p>Weather forcasting application using API intergation.</p>
+            </div>
+            <div class="project-card">
+                <h3>To-Do List</h3>
+                <p>Task msnagement app with local storage support.</p>
+            </div>
+        </div>
+    </section>
+    <section id="Contact-form">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="Contact-form"id="Contactform">
+            <input type="text" placeholder="yourname" required>
+            <input type="email"placeholder="yourEmail"required>
+            <textarea rows="5"placeholder="yourmessage"></textarea>
+            <button type="submit">send message</button>
+        </form>
+    </section>
+    <footer>
+        2026 ASHIK portfolio  | All rights Reserved
+    </footer>
+    <script>
+        const text ="MCA Graduate  | Web Developer";
+        let i = 0;
+        function typingEffect(){
+            if(i <text.length){
+                document.getElementById("typing").innerHTML +=
+                text.charAt(i);
+                i++;
+                setTimeout(typingEffect,100);
+            }
+        }
+        typingEffect();
+        document.getElementById("contactFrom").addEventListener("submit",function(e){e.preventDefault();
+            alert("Thank you! Your message has been recieved.");
+            this.reset();
+        });
+        </script>
+</body>
+</html>
